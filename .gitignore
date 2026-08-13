@@ -1,0 +1,21 @@
+# Virtual env
+venv/
+env/
+.venv/
+
+# Database SQLite
+*.sqlite3
+db.sqlite3
+
+# Cache and temporary files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# IDE
+.vscode/
+.idea/
+
+
+.env

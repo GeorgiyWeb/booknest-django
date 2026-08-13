@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Welcome — BookNest{% endblock %}
+{% block content %}
+<h1>{{ message }}</h1>
+<p>Today is {{ today|date:"F j, Y" }}.</p>
+<p>
+  Use the navigation above to view the
+  <a href="{% url 'catalog:dashboard' %}">Book Dashboard</a>.
+</p>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}Dashboard — BookNest{% endblock %}
+{% block content %}
+<h1>Book Dashboard</h1>
+{% if items %}
+<ul>
+  {% for item in items %}
+  <li>
+    <h2>{{ item.title }}</h2>
+    <p><strong>Genre:</strong> {{ item.genre.name }}</p>
+    <p><strong>Price (cents):</strong> {{ item.price_cents }}</p>
+    <p><strong>Pages:</strong> {{ item.page_count }}</p>
+    <p><strong>Status:</strong> {{ item.get_status_display }}</p>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>No books registered yet.</p>
+{% endif %}
+{% endblock %}

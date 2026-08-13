@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}BookNest{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  <nav>
+    <a href="{% url 'catalog:home' %}">Home</a>
+    <a href="{% url 'catalog:dashboard' %}">Dashboard</a>
+    <a href="/admin/">Admin</a>
+  </nav>
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+  <footer>
+    &copy; {% now "Y" %} BookNest Book Management
+  </footer>
+</body>
+</html>
